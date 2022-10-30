@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   mysql:
-    container_name: saju_db_dev
+    container_name: saju_nodejs_mysql
     image: mysql:5.7.27
     restart: always
     environment:
