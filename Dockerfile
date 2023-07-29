@@ -1,4 +1,4 @@
-FROM node:16.13.2-alpine 
+FROM --platform=linux/amd64 node:16.13.2-alpine 
 RUN apk add --no-cache tzdata 
 ENV TZ Asia/Seoul
 
@@ -8,3 +8,4 @@ COPY . .
 
 RUN npm install
 CMD npm run start 
+
