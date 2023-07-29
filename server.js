@@ -21,7 +21,7 @@ sequelize
     process.env.NODE_ENV !== "test" ? console.log("Mysql 연결 성공") : null;
   })
   .catch(async (err) => {
-    console.log(err)
+    console.log(err);
     if (process.env.NODE_ENV === "prod") {
       process.env.SLACK_KEY
         ? await slack.slackMessage("#ff0000", "Mysql 연결 에러", err.message, moment().unix())
