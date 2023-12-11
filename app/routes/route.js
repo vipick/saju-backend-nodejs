@@ -5,7 +5,7 @@ const moment = require("moment");
 
 //테스트
 router.get("/", (req, res) => {
-  return res.status(200).send(process.env.NODE_ENV + " : working! 12-11-2");
+  return res.status(200).send(process.env.NODE_ENV + " : working! 12-11-3");
 });
 
 //slack 테스트
