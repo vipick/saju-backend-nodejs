@@ -2,7 +2,8 @@ version: "3.8"
 services:
   mysql:
     container_name: saju_nodejs_mysql
-    image: mysql:5.7.27
+    image: mysql:8.0.21
+    platform: linux/amd64
     restart: always
     environment:
       - MYSQL_USER=root
