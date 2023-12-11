@@ -17,23 +17,23 @@ module.exports = {
   },
   prod: {
     database: process.env.PROD_DB_DATABASE,
-    host: process.env.PROD_DB_HOST,
-    username: process.env.PROD_DB_USERNAME,
-    password: process.env.PROD_DB_PASSWORD,
-    // replication: {
-    //   write: {
-    //     host: process.env.PROD_DB_WRITER_HOST,
-    //     username: process.env.PROD_DB_USERNAME,
-    //     password: process.env.PROD_DB_PASSWORD,
-    //   },
-    //   read: [
-    //     {
-    //       host: process.env.PROD_DB_READER_HOST,
-    //       username: process.env.PROD_DB_USERNAME,
-    //       password: process.env.PROD_DB_PASSWORD,
-    //     },
-    //   ],
-    // },
+    // host: process.env.PROD_DB_HOST,
+    // username: process.env.PROD_DB_USERNAME,
+    // password: process.env.PROD_DB_PASSWORD,
+    replication: {
+      write: {
+        host: process.env.PROD_DB_WRITER_HOST,
+        username: process.env.PROD_DB_USERNAME,
+        password: process.env.PROD_DB_PASSWORD,
+      },
+      read: [
+        {
+          host: process.env.PROD_DB_READER_HOST,
+          username: process.env.PROD_DB_USERNAME,
+          password: process.env.PROD_DB_PASSWORD,
+        },
+      ],
+    },
     port: 3306,
     dialect: "mysql",
     logging: false,
